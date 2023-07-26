@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <style>
+      *{
+  margin: 0;
+  padding: 0;
+  color:rgb(180, 180, 171);
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+      .content-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        min-width: 400px;
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        margin-left: 2%;
+        margin-top: 5%;
+      }
+
+      .content-table thead tr {
+        background-color: rgb(52, 58, 64);
+        color: #ffffff;
+        text-align: left;
+        font-weight: bold;
+      }
+
+      .content-table th,
+      .content-table td {
+        padding: 12px 15px;
+      }
+
+      .content-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+      }
+
+      .content-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+      }
+
+      .content-table tbody tr:last-of-type {
+        border-bottom: 2px solid rgb(52, 58, 64);
+      }
+
+      .content-table tbody tr.active-row {
+        font-weight: bold;
+        color: rgb(52, 58, 64);
+      }
+
+      .button {
+        display: flex;
+        height: 40px;
+        padding: 0;
+        background: #009578;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        overflow: hidden;
+        font-family: "Quicksand", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        margin-top: 8px;
+      }
+
+      .button:hover {
+        background: #008168;
+      }
+
+      .button:active {
+        background: #006e58;
+      }
+
+      .button__text,
+      .button__icon {
+        display: inline-flex;
+        align-items: center;
+        padding: 0 24px;
+        color: #fff;
+        height: 100%;
+      }
+
+      .button__icon {
+        font-size: 1.5em;
+        background: rgba(0, 0, 0, 0.08);
+      }
+      *{
+  margin: 0;
+  padding: 0;
+  color:rgb(180, 180, 171);
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.content1{
+  position: relative;
+  margin: 130px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.content1 .p{
+  font-size: 2.1875rem;
+  font-weight: 600;
+  color: #202020;
+}
+footer{
+  /* position: fixed; */
+  bottom: 0px;
+  width: 100%;
+  background: #111;
+}
+.main-content{
+  display: flex;
+}
+.main-content .box{
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.box h2{
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box .content{
+  margin: 20px 0 0 0;
+  position: relative;
+}
+.box .content:before{
+  position: absolute;
+  content: '';
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: #1a1a1a;
+}
+.box .content:after{
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 15%;
+  background: #f12020;
+  top: -10px;
+}
+.left .content p{
+  text-align: justify;
+}
+.left .content .social{
+  margin: 20px 0 0 0;
+}
+.left .content .social a{
+  padding: 0 2px;
+}
+.left .content .social a span{
+  height: 40px;
+  width: 40px;
+  background: #1a1a1a;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.left .content .social a span:hover{
+  background: #f12020;
+}
+.center .content .fas{
+  font-size: 1.4375rem;
+  background: #1a1a1a;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.center .content .fas:hover{
+  background: #f12020;
+}
+.center .content .text{
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.center .content .phone{
+  margin: 15px 0;
+}
+.right form .text{
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  color: #656565;
+}
+.right form .msg{
+  margin-top: 10px;
+}
+.right form input, .right form textarea{
+  width: 100%;
+  font-size: 1.0625rem;
+  background: #151515;
+  padding-left: 10px;
+  border: 1px solid #222222;
+}
+.right form input:focus,
+.right form textarea:focus{
+  outline-color: #3498db;
+}
+.right form input{
+  height: 35px;
+}
+.right form .btn{
+  margin-top: 10px;
+}
+.right form .btn button{
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #f12020;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+}
+.right form .btn button:hover{
+  background: #000;
+}
+.bottom center{
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: #151515;
+}
+.bottom center span{
+  color: #656565;
+}
+.bottom center a{
+  color: #f12020;
+  text-decoration: none;
+}
+.bottom center a:hover{
+  text-decoration: underline;
+}
+@media screen and (max-width: 900px) {
+  footer{
+    position: relative;
+    bottom: 0px;
+  }
+  .main-content{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-content .box{
+    margin: 5px 0;
+  }
+}
+
+     
+
+    </style>
+    <title>{% block title %}Home{% endblock %}</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a href="#" class="navbar-brand mb-0 h1"
+        ><img src="/static/images/logo.PNG" width="45" height="30" />ServiceEezy</a
+      >
+      <div class="collapse navbar-collapse" id="navbar">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" id="home" href="/added_requests"
+            >Added Requests</a
+          >
+          <a class="nav-item nav-link" id="add_service" href="/add_service"
+            >Add Service</a
+          >
+          <a
+            class="nav-item nav-link"
+            id="add_service"
+            href="/completed_services_user"
+            >Completed Services</a
+          >
+          <a
+            class="nav-item nav-link"
+            id="deleted_services"
+            href="/deleted_services"
+            >Deleted Services</a
+          >
+          <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
+          <a
+            class="nav-item nav-link"
+            id="logout"
+            href="#"
+            style="color: #f3f3f3"
+            >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            Welcome, {{current_user_name}}!</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if category ==
+    'error' %}
+    <div class="alert alert-danger alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+
+    <div class="container">{% block content %} {% endblock %}</div>
+
+    <h1 style="margin-top: 45px; margin-left: 36%; color: #111;">Your added requests</h1>
+
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Service Provider Name</th>
+          <th>Service Provider Phone</th>
+          <th>Department</th>
+          <th>Status</th>
+          <th>Date of Request</th>
+          <th>Estimated date of Service</th>
+          <th>Request Completed</th>
+          <th>Delete Request</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        {%for i in listt%}
+        <tr>
+          {%for j in i%}
+          <td>{{j}}</td>
+          {%endfor%}
+          <td>
+            {%if (i[4][0]) == 'A'%}
+            <button type="button" class="button">
+              <a class="button__text" href={{ url_for('complete_this_service', parameter=i[0]) }}>Completed</a>
+              <span class="button__icon">
+                <ion-icon name="add-outline"></ion-icon>
+              </span>
+            </button>
+            {% endif %}
+          </td>
+          <td>
+            {%if i[4][0] != 'A'%}
+            <button
+              type="button"
+              class="button"
+              style="background-color: rgb(237, 64, 64)"
+            >
+              <a class="button__text" href={{ url_for('delete_this_service', parameter=i[0]) }}>Delete</a>
+              <span class="button__icon">
+                <ion-icon name="add-outline"></ion-icon>
+              </span>
+            </button>
+            {% endif %}
+          </td>
+        </tr>
+        {%endfor%}
+      </tbody>
+    </table>
+    <br><br><br><br><br><br><br>
+    <footer>
+      <div class="main-content">
+        <div class="left box">
+          <h2>About us</h2>
+          <div class="content">
+            <p>It is  a responsive website which will provide services by different technicians like
+              plumbers, carpenters and electricians whichever needed to the user through a single platform</p>
+           
+          </div>
+        </div>
+        <div class="center box">
+          <h2>Address</h2>
+          <div class="content">
+            <div class="place">
+              <span class="fas fa-map-marker-alt"></span>
+              <span class="text">ServiceEezy</span>
+            </div>
+            <div class="phone">
+              <span class="fas fa-phone-alt"></span>
+              <span class="text">+089-765432100</span>
+            </div>
+            <div class="email">
+              <span class="fas fa-envelope"></span>
+              <span class="text">serviceeezy@gmail.com</span>
+            </div>
+          </div>
+        </div>
+        <div class="right box">
+          <h2>Designed By</h2>
+          
+          <div class="content">
+            <form action="#">
+         
+          <h5>ReetS</h5>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <center>
+          <span class="far fa-copyright"></span><span> 2022 All rights reserved.</span>
+        </center>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

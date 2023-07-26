@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <style>
+      .content-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        min-width: 400px;
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        margin-left: 18%;
+        margin-top: 5%;
+      }
+
+      .content-table thead tr {
+        background-color: rgb(52, 58, 64);
+        color: #ffffff;
+        text-align: left;
+        font-weight: bold;
+      }
+
+      .content-table th,
+      .content-table td {
+        padding: 12px 15px;
+      }
+
+      .content-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+      }
+
+      .content-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+      }
+
+      .content-table tbody tr:last-of-type {
+        border-bottom: 2px solid rgb(52, 58, 64);
+      }
+
+      .content-table tbody tr.active-row {
+        font-weight: bold;
+        color: rgb(52, 58, 64);
+      }
+      * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+   
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    font-size: 13px;
+    margin: 0; 
+     
+}
+   
+  input, textarea, select, button {
+    font-family: arial;
+    color: #333;
+    font-size: 14px; }
+   
+  p, h1, h2, h3, h4, h5, h6, ul {
+    margin: 0; }
+   
+  img {
+    max-width: 100%; }
+   
+  ul {
+    padding-left: 0;
+    margin-bottom: 0; }
+   
+  a:hover {
+    text-decoration: none; }
+   
+  :focus {
+    outline: none; }
+   
+  .wrapper {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center; }
+   
+  .inner {
+    padding: 20px;
+    background: #fff;
+    max-width: 850px;
+    margin: auto;
+    display: flex; }
+    .inner .image-holder {
+      width: 50%; }
+    .inner form {
+      width: 50%;
+      padding-top: 36px;
+      padding-left: 45px;
+      padding-right: 45px; }
+    .inner h3 {
+      text-transform: uppercase;
+      font-size: 25px;
+      text-align: center;
+      margin-bottom: 28px; }
+   
+  .form-group {
+    display: flex; }
+    .form-group input {
+      width: 50%; }
+      .form-group input:first-child {
+        margin-right: 25px; }
+   
+  .form-wrapper {
+    position: relative; }
+    .form-wrapper i {
+      position: absolute;
+      bottom: 9px;
+      right: 0; }
+   
+  .form-control {
+    border: 1px solid #333;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding: 0;
+    margin-bottom: 25px; 
+}
+    .form-control::-webkit-input-placeholder {
+      font-size: 14px;
+      color: gray;
+      font-family: arial; }
+     
+  select {
+    font-size: 14px;
+    font-family: arial;
+    cursor: pointer;
+    padding-left: 20px; 
+    color: gray;
+}
+    select option[value=""][disabled] {
+      display: none; }
+   
+  button {
+    border: none;
+    width: 164px;
+    height: 51px;
+    margin: auto;
+    margin-top: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: #333;
+    font-size: 15px;
+    color: #fff;
+  }
+  button:hover{
+    background: or;
+  }
+   
+  @media (max-width: 767px) {
+    .inner {
+      display: block; }
+      .inner .image-holder {
+        width: 100%; }
+      .inner form {
+        width: 100%;
+        padding: 40px 0 30px; }
+   
+    button {
+      margin-top: 60px; } }
+  
+    </style>
+    <title>{% block title %}Home{% endblock %}</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a href="#" class="navbar-brand mb-0 h1"
+        ><img src="/static/images/logo.PNG" width="45" height="30" /> ServiceEezy</a
+      >
+      <div class="collapse navbar-collapse" id="navbar">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" id="logout" href="/sign-up">Sign Up</a>
+          <a class="nav-item nav-link" id="logout" href="/">Home</a>
+        </div>
+      </div>
+    </nav>
+      <div class="wrapper" style= "background-color: rgb(227, 227, 222);">
+        <div class="inner">
+        <div class="image-holder">
+        <img src="/static/images/background_user.jpg" alt="image">
+        </div>
+        <form method="POST">
+        <h3>User Login</h3>
+       <div class="form-wrapper">
+         <input type="text" placeholder="Email Address" class="form-control" id="email"
+      name="email">
+         </div>
+        <div class="form-wrapper">
+        <input type="password" placeholder="Password" class="form-control" id="password"
+      name="password">
+        </div>
+        <button>Login
+         </button>
+       
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </form>
+</div>
+</div>
+  </body>
+</html>
